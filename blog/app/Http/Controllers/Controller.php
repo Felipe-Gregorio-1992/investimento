@@ -13,7 +13,9 @@ class Controller extends BaseController
 
     public function homepage()
     {
-        return view('welcome');
+        $variavel = "home page do sistema de gestao para grupo de investimento";
+        
+        return view('welcome',['title'=>$variavel]);
     }
 
     public function cadastro()
@@ -23,6 +25,6 @@ class Controller extends BaseController
 
     public function telalogin()
     {
-        echo'tela de login';
+        return view('user.login');
     }
 }
