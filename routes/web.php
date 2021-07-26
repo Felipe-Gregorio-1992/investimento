@@ -17,6 +17,7 @@ Route::get('/',['uses' => 'Controller@homepage']);
 Route::get('/cadastro',['uses' => 'Controller@cadastro']);
 
 Route::get('/login',['uses' => 'Controller@telalogin']);
-Route::post('/login',['as'=>'user.login','uses' => 'Controller@auth']);
+Route::post('/login',['as'=>'user.login','uses' => 'DashboardController@auth']);
+Route::post('/dashboard',['as'=>'user.dashboard','uses' => 'DashboardController@index']);
 
 
